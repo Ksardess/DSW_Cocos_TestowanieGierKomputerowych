@@ -1,0 +1,129 @@
+Cocos 
+
+Struktura plików w Cocos Creator 
+
+1. assets/ 
+
+Najważniejszy katalog projektu. 
+Zawiera wszystkie zasoby używane w grze: 
+
+sceny (*.scene) 
+
+skrypty (najczęściej TypeScript) 
+
+prefaby (*.prefab) 
+
+grafiki (PNG, JPG) 
+
+dźwięki (WAV, MP3) 
+
+animacje, shadery, fonty 
+
+konfiguracje gry 
+
+To katalog, z którym pracuje się bezpośrednio w edytorze. 
+
+ 
+
+2. library/ 
+
+Katalog generowany automatycznie. 
+Przechowuje skompilowane metadane zasobów z assets/. 
+
+Charakterystyka: 
+
+użytkownik nie edytuje tych plików ręcznie, 
+
+przebudowywany po zmianach w projekcie, 
+
+przy uszkodzeniu można go usunąć — edytor odtworzy go samodzielnie. 
+
+ 
+
+3. local/ 
+
+Zawiera dane lokalne użytkownika: 
+
+ustawienia edytora, 
+
+cache pomocniczy, 
+
+dane, które nie są potrzebne innym członkom zespołu. 
+
+Katalog nie powinien być wersjonowany (np. przez Git). 
+
+ 
+
+4. temp/ 
+
+Katalog tymczasowy tworzony podczas działania edytora: 
+
+pliki kompilacji, 
+
+pamięć podręczna procesów budowania, 
+
+wyniki pośrednie. 
+
+Można go bezpiecznie usunąć — odbuduje się automatycznie. 
+
+ 
+
+5. packages/ 
+
+Miejsce na własne lub zewnętrzne pluginy do edytora Cocos Creator. 
+
+rozszerzenia UI, 
+
+narzędzia developerskie, 
+
+moduły do pipeline’u. 
+
+Nie dotyczy runtime gry, tylko edytora. 
+
+ 
+
+6. build/ 
+
+Zawiera wyniki eksportu gry: 
+
+wersja webowa (HTML5), 
+
+wersja desktopowa, 
+
+wersja mobilna (Android / iOS), 
+
+dowolny inny build. 
+
+Pliki w tym katalogu mogą być umieszczone na serwerze lub urządzeniu końcowym. 
+
+ 
+
+7. project.json / project.config.json (lub nowszy odpowiednik) 
+
+Główna konfiguracja projektu Cocos: 
+
+dane o wersji projektu, 
+
+podstawowe ustawienia edytora, 
+
+informacje o modułach, 
+
+metadane wymagane do otwarcia projektu. 
+
+Nie zawiera zasobów gry — tylko konfigurację. 
+
+ 
+
+8. tsconfig.json (dla TypeScript) 
+
+Konfiguracja kompilatora TypeScript: 
+
+ścieżki importów, 
+
+reguły kompilacji, 
+
+target i moduły. 
+
+Kluczowy plik przy projektach pisanych w TS. 
+
+ 
